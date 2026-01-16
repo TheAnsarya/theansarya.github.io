@@ -112,9 +112,9 @@ TTL: Auto
 
 3. Go to **SSL/TLS** → **Edge Certificates**
 4. Enable these settings:
-   - ✅ **Always Use HTTPS**
-   - ✅ **Automatic HTTPS Rewrites**
-   - ✅ **Minimum TLS Version**: 1.2
+	- ✅ **Always Use HTTPS**
+	- ✅ **Automatic HTTPS Rewrites**
+	- ✅ **Minimum TLS Version**: 1.2
 
 Cloudflare will automatically provision a free Universal SSL certificate (usually takes 5-15 minutes, max 24 hours).
 
@@ -131,8 +131,8 @@ Cloudflare will automatically provision a free Universal SSL certificate (usuall
 GitHub will perform a DNS check (may take a few minutes).
 
 6. Once DNS check passes, you'll see:
-   - ✅ DNS check successful
-   - An option to **Enforce HTTPS** will appear
+	- ✅ DNS check successful
+	- An option to **Enforce HTTPS** will appear
 
 7. Check the box: ✅ **Enforce HTTPS**
 
@@ -158,8 +158,8 @@ After DNS propagates (15 minutes to 24 hours):
 2. Visit `https://ansarya.com` → Should load your site with SSL
 3. Visit `https://www.ansarya.com` → Should also work
 4. Check SSL certificate:
-   - Click the padlock icon in browser
-   - Should show a valid certificate (from Cloudflare)
+	- Click the padlock icon in browser
+	- Should show a valid certificate (from Cloudflare)
 
 ### 5.3 Verify in GitHub
 
@@ -228,13 +228,13 @@ In your GitHub repository Settings → Pages, you should see:
 
 ### DNS Records Summary
 
-| Type  | Name | Value/Target          | Proxy  |
+| Type	| Name | Value/Target			| Proxy	|
 |-------|------|-----------------------|--------|
-| A     | @    | 185.199.108.153       | ✅ On  |
-| A     | @    | 185.199.109.153       | ✅ On  |
-| A     | @    | 185.199.110.153       | ✅ On  |
-| A     | @    | 185.199.111.153       | ✅ On  |
-| CNAME | www  | theansarya.github.io  | ✅ On  |
+| A	 | @	| 185.199.108.153		| ✅ On	|
+| A	 | @	| 185.199.109.153		| ✅ On	|
+| A	 | @	| 185.199.110.153		| ✅ On	|
+| A	 | @	| 185.199.111.153		| ✅ On	|
+| CNAME | www	| theansarya.github.io	| ✅ On	|
 
 ### Cloudflare Settings Checklist
 
@@ -257,17 +257,17 @@ In your GitHub repository Settings → Pages, you should see:
 
 ## Timeline Expectations
 
-| Step                          | Time Required          |
+| Step							| Time Required			|
 |-------------------------------|------------------------|
-| Update CNAME file             | Instant                |
-| Commit and push to GitHub     | Instant                |
-| Nameserver propagation        | 15 min - 24 hours      |
-| DNS record propagation        | 5 min - 24 hours       |
-| Cloudflare SSL provisioning   | 5 min - 24 hours       |
-| GitHub DNS check              | 1-5 minutes            |
-| GitHub SSL certificate        | 5 min - 24 hours       |
-| **Total (worst case)**        | **Up to 48 hours**     |
-| **Total (typical)**           | **30-60 minutes**      |
+| Update CNAME file			 | Instant				|
+| Commit and push to GitHub	 | Instant				|
+| Nameserver propagation		| 15 min - 24 hours		|
+| DNS record propagation		| 5 min - 24 hours		|
+| Cloudflare SSL provisioning	| 5 min - 24 hours		|
+| GitHub DNS check				| 1-5 minutes			|
+| GitHub SSL certificate		| 5 min - 24 hours		|
+| **Total (worst case)**		| **Up to 48 hours**	 |
+| **Total (typical)**			| **30-60 minutes**		|
 
 ---
 

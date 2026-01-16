@@ -48,11 +48,11 @@ Cloudflare provides DNS management, CDN, SSL certificates, and security features
 3. Go to **DNS** → **Records**
 4. Click **Add record**
 5. Fill in the details:
-   - **Type:** A or CNAME
-   - **Name:** @ for root, www for subdomain
-   - **IPv4/Target:** The IP or hostname
-   - **Proxy status:** Enabled (orange cloud)
-   - **TTL:** Auto
+	- **Type:** A or CNAME
+	- **Name:** @ for root, www for subdomain
+	- **IPv4/Target:** The IP or hostname
+	- **Proxy status:** Enabled (orange cloud)
+	- **TTL:** Auto
 6. Click **Save**
 
 ---
@@ -159,7 +159,7 @@ For detailed analytics, enable Cloudflare Web Analytics:
 ```html
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' 
-        data-cf-beacon='{"token": "YOUR_TOKEN"}'></script>
+		data-cf-beacon='{"token": "YOUR_TOKEN"}'></script>
 ```
 
 ---
@@ -235,7 +235,7 @@ Create page rules for custom behavior:
 
 ```
 User → Cloudflare CDN → GitHub Pages Origin
-         (HTTPS)           (HTTPS)
+		 (HTTPS)			(HTTPS)
 ```
 
 1. User requests `https://ansarya.com`

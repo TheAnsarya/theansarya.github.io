@@ -44,9 +44,9 @@ For project sites:
 2. Click **Settings** (gear icon in top bar)
 3. In left sidebar, click **Pages** (under "Code and automation")
 4. Under **Build and deployment**:
-   - **Source:** Deploy from a branch
-   - **Branch:** `main` (or your default branch)
-   - **Folder:** `/ (root)` or `/docs`
+	- **Source:** Deploy from a branch
+	- **Branch:** `main` (or your default branch)
+	- **Folder:** `/ (root)` or `/docs`
 5. Click **Save**
 
 ### Step 3: Add Content
@@ -54,12 +54,12 @@ For project sites:
 Minimum required file structure:
 ```
 /
-├── index.html          # Main page
-├── CNAME               # Custom domain (optional)
-├── README.md           # Repository description
-└── pages/              # Additional pages
-    ├── repositories.md
-    └── plans.md
+├── index.html			# Main page
+├── CNAME				# Custom domain (optional)
+├── README.md			# Repository description
+└── pages/				# Additional pages
+	├── repositories.md
+	└── plans.md
 ```
 
 ### Step 4: Verify Deployment
@@ -161,11 +161,11 @@ Create `404.html` in your root:
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Not Found</title>
+	<title>Page Not Found</title>
 </head>
 <body>
-    <h1>404 - Page Not Found</h1>
-    <p><a href="/">Return to homepage</a></p>
+	<h1>404 - Page Not Found</h1>
+	<p><a href="/">Return to homepage</a></p>
 </body>
 </html>
 ```

@@ -33,30 +33,30 @@ A living document tracking current projects, future plans, and strategic goals f
 
 ### VS Code Extensions
 - **Poppy Assembly Extension**
-  - [ ] Complete syntax highlighting for all major assembly dialects
-  - [ ] Implement debugging support
-  - [ ] Add code snippets library
-  - [ ] Release v1.0 to marketplace
-  - [ ] Create comprehensive documentation
-  - [ ] Add unit tests (target: 80% coverage)
+	- [ ] Complete syntax highlighting for all major assembly dialects
+	- [ ] Implement debugging support
+	- [ ] Add code snippets library
+	- [ ] Release v1.0 to marketplace
+	- [ ] Create comprehensive documentation
+	- [ ] Add unit tests (target: 80% coverage)
 
 ### Website & Documentation
 - **ansarya.com**
-  - [ ] Add project showcase section
-  - [ ] Create blog/updates section
-  - [ ] Add search functionality
-  - [ ] Implement dark mode toggle
-  - [ ] Add RSS feed for updates
-  - [ ] SEO optimization
+	- [ ] Add project showcase section
+	- [ ] Create blog/updates section
+	- [ ] Add search functionality
+	- [ ] Implement dark mode toggle
+	- [ ] Add RSS feed for updates
+	- [ ] SEO optimization
 
 ### Music Tools
 - **SNES SPC Workflow**
-  - [ ] Complete SPC to MIDI converter
-  - [ ] Implement Ableton Live project generator
-  - [ ] Create sample library manager
-  - [ ] Build round-trip workflow automation
-  - [ ] Write comprehensive guide
-  - [ ] Release beta version
+	- [ ] Complete SPC to MIDI converter
+	- [ ] Implement Ableton Live project generator
+	- [ ] Create sample library manager
+	- [ ] Build round-trip workflow automation
+	- [ ] Write comprehensive guide
+	- [ ] Release beta version
 
 ---
 
@@ -64,21 +64,21 @@ A living document tracking current projects, future plans, and strategic goals f
 
 ### New Projects
 1. **Assembly Language Learning Platform**
-   - Interactive tutorials
-   - Code playground
-   - Challenge system
-   - Community features
+	- Interactive tutorials
+	- Code playground
+	- Challenge system
+	- Community features
 
 2. **ROM Hacking Toolkit**
-   - Unified toolset for NES/SNES
-   - GUI-based workflow
-   - Plugin architecture
-   - Template system
+	- Unified toolset for NES/SNES
+	- GUI-based workflow
+	- Plugin architecture
+	- Template system
 
 3. **VS Code Theme Pack**
-   - Retro-inspired themes
-   - Optimized for assembly code
-   - Accessibility-focused
+	- Retro-inspired themes
+	- Optimized for assembly code
+	- Accessibility-focused
 
 ### Community Building
 - [ ] Launch Discord server
@@ -95,35 +95,35 @@ A living document tracking current projects, future plans, and strategic goals f
 
 #### Technology & Tools
 1. **VS Code Extension Suite**
-   - Poppy Assembly (Q1)
-   - Retro Graphics Editor (Q2)
-   - Sound Driver Tool (Q3)
-   - Integrated ROM Builder (Q4)
+	- Poppy Assembly (Q1)
+	- Retro Graphics Editor (Q2)
+	- Sound Driver Tool (Q3)
+	- Integrated ROM Builder (Q4)
 
 2. **Open Source Contributions**
-   - Contribute to VS Code core
-   - Improve assembly language support in Monaco Editor
-   - Submit patches to upstream projects
-   - Mentor new contributors
+	- Contribute to VS Code core
+	- Improve assembly language support in Monaco Editor
+	- Submit patches to upstream projects
+	- Mentor new contributors
 
 3. **Educational Content**
-   - Assembly language course
-   - ROM hacking tutorial series
-   - Music composition for retro games
-   - VS Code extension development guide
+	- Assembly language course
+	- ROM hacking tutorial series
+	- Music composition for retro games
+	- VS Code extension development guide
 
 #### Community & Growth
 1. **Audience Building**
-   - 1,000+ extension users by Q2
-   - 500+ GitHub stars across projects by Q3
-   - Active contributor community by Q4
-   - Regular content schedule
+	- 1,000+ extension users by Q2
+	- 500+ GitHub stars across projects by Q3
+	- Active contributor community by Q4
+	- Regular content schedule
 
 2. **Quality & Standards**
-   - 90%+ test coverage on all libraries
-   - Comprehensive documentation for all projects
-   - Automated CI/CD pipelines
-   - Security best practices
+	- 90%+ test coverage on all libraries
+	- Comprehensive documentation for all projects
+	- Automated CI/CD pipelines
+	- Security best practices
 
 ---
 
@@ -131,58 +131,58 @@ A living document tracking current projects, future plans, and strategic goals f
 
 ### High Priority
 1. **Assembly Code Formatter**
-   - Auto-format assembly code
-   - Configurable styles
-   - VS Code integration
+	- Auto-format assembly code
+	- Configurable styles
+	- VS Code integration
 
 2. **ROM Patch Manager**
-   - Track applied patches
-   - Version control integration
-   - Conflict resolution
+	- Track applied patches
+	- Version control integration
+	- Conflict resolution
 
 3. **Sprite Editor Extension**
-   - Edit graphics in-editor
-   - Export to multiple formats
-   - Preview in real-time
+	- Edit graphics in-editor
+	- Export to multiple formats
+	- Preview in real-time
 
 ### Medium Priority
 1. **Sound Test Player**
-   - Play SPC/NSF files in VS Code
-   - Visualizer
-   - Export functionality
+	- Play SPC/NSF files in VS Code
+	- Visualizer
+	- Export functionality
 
 2. **Label Manager**
-   - Smart label navigation
-   - Cross-reference tracking
-   - Automatic documentation
+	- Smart label navigation
+	- Cross-reference tracking
+	- Automatic documentation
 
 3. **Hex Editor Integration**
-   - View/edit binary files
-   - Structure templates
-   - Diff support
+	- View/edit binary files
+	- Structure templates
+	- Diff support
 
 ### Future Exploration
 1. **AI-Assisted ROM Analysis**
-   - Pattern detection
-   - Code suggestion
-   - Documentation generation
+	- Pattern detection
+	- Code suggestion
+	- Documentation generation
 
 2. **Cloud-based ROM Workspace**
-   - Collaborative editing
-   - Version control
-   - Cloud builds
+	- Collaborative editing
+	- Version control
+	- Cloud builds
 
 3. **Mobile Companion App**
-   - Remote testing
-   - Documentation viewer
-   - Progress tracking
+	- Remote testing
+	- Documentation viewer
+	- Progress tracking
 
 ---
 
 ## 🎮 Active Epics
 
 ### Epic 1: SNES Music Editing Workflow
-**Status:** In Progress  
+**Status:** In Progress	
 **Tracking:** [GameInfo#170](https://github.com/TheAnsarya/GameInfo/issues/170)
 
 #### Vision
@@ -202,7 +202,7 @@ Create a complete round-trip workflow for editing SNES game music using Ableton 
 - [ ] Release v1.0
 
 ### Epic 2: Poppy Assembly Extension Launch
-**Status:** In Progress  
+**Status:** In Progress	
 **Target:** Q1 2026
 
 #### Milestones
@@ -214,7 +214,7 @@ Create a complete round-trip workflow for editing SNES game music using Ableton 
 - [ ] Launch & Promotion (0% complete)
 
 ### Epic 3: ansarya.com Content Platform
-**Status:** In Progress  
+**Status:** In Progress	
 **Target:** Ongoing
 
 #### Components
@@ -342,6 +342,6 @@ Have ideas for the roadmap? Want to contribute?
 
 *This is a living document. Last updated: January 16, 2026*
 
-**Version:** 1.0.0  
-**Status:** Active  
+**Version:** 1.0.0	
+**Status:** Active	
 **Next Review:** February 1, 2026

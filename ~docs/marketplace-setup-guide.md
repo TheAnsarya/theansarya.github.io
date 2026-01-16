@@ -14,10 +14,10 @@ This guide walks you through publishing your VS Code extension to the Visual Stu
 2. Sign in with your Microsoft account
 3. Click "Create publisher"
 4. Fill in the required information:
-   - **Publisher ID**: `TheAnsarya` (must be unique, lowercase, no spaces)
-   - **Display Name**: Your display name
-   - **Email**: Your contact email
-   - **Website**: https://theansarya.github.io/ansarya/
+	- **Publisher ID**: `TheAnsarya` (must be unique, lowercase, no spaces)
+	- **Display Name**: Your display name
+	- **Email**: Your contact email
+	- **Website**: https://theansarya.github.io/ansarya/
 
 ## Step 2: Create a Personal Access Token (PAT)
 
@@ -26,11 +26,11 @@ This guide walks you through publishing your VS Code extension to the Visual Stu
 3. Click on User Settings (top right) → Personal Access Tokens
 4. Click "+ New Token"
 5. Configure the token:
-   - **Name**: "VS Code Marketplace Publishing"
-   - **Organization**: All accessible organizations
-   - **Expiration**: 90 days (or custom)
-   - **Scopes**: Custom defined
-     - **Marketplace**: Select "Acquire" and "Manage"
+	- **Name**: "VS Code Marketplace Publishing"
+	- **Organization**: All accessible organizations
+	- **Expiration**: 90 days (or custom)
+	- **Scopes**: Custom defined
+	 - **Marketplace**: Select "Acquire" and "Manage"
 6. Click "Create" and **copy the token** (you won't see it again!)
 
 ## Step 3: Install vsce (Visual Studio Code Extension Manager)
@@ -45,29 +45,29 @@ If you haven't already, create a `package.json` file in your extension root:
 
 ```json
 {
-  "name": "your-extension-name",
-  "displayName": "Your Extension Display Name",
-  "description": "A brief description of your extension",
-  "version": "0.0.1",
-  "publisher": "TheAnsarya",
-  "engines": {
-    "vscode": "^1.85.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [],
-  "main": "./extension.js",
-  "contributes": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TheAnsarya/ansarya.git"
-  },
-  "bugs": {
-    "url": "https://github.com/TheAnsarya/ansarya/issues"
-  },
-  "homepage": "https://theansarya.github.io/ansarya/",
-  "license": "SEE LICENSE IN LICENSE"
+	"name": "your-extension-name",
+	"displayName": "Your Extension Display Name",
+	"description": "A brief description of your extension",
+	"version": "0.0.1",
+	"publisher": "TheAnsarya",
+	"engines": {
+	"vscode": "^1.85.0"
+	},
+	"categories": [
+	"Other"
+	],
+	"activationEvents": [],
+	"main": "./extension.js",
+	"contributes": {},
+	"repository": {
+	"type": "git",
+	"url": "https://github.com/TheAnsarya/ansarya.git"
+	},
+	"bugs": {
+	"url": "https://github.com/TheAnsarya/ansarya/issues"
+	},
+	"homepage": "https://theansarya.github.io/ansarya/",
+	"license": "SEE LICENSE IN LICENSE"
 }
 ```
 
@@ -107,9 +107,9 @@ This adds a verified badge to your publisher profile.
 3. Scroll to "Verified Domain"
 4. Enter your domain (e.g., `ansarya.com`)
 5. You'll be given a TXT record to add to your DNS:
-   - Type: `TXT`
-   - Name: `@` or your root domain
-   - Value: The verification string provided by Microsoft
+	- Type: `TXT`
+	- Name: `@` or your root domain
+	- Value: The verification string provided by Microsoft
 
 ### Using Cloudflare DNS for Verification
 
@@ -118,11 +118,11 @@ This adds a verified badge to your publisher profile.
 3. Go to DNS → Records
 4. Click "Add record"
 5. Set:
-   - Type: `TXT`
-   - Name: `@` (for root domain) or `_vscode-marketplace` (if specified)
-   - Content: The verification string from Microsoft
-   - TTL: Auto
-   - Proxy status: DNS only (gray cloud)
+	- Type: `TXT`
+	- Name: `@` (for root domain) or `_vscode-marketplace` (if specified)
+	- Content: The verification string from Microsoft
+	- TTL: Auto
+	- Proxy status: DNS only (gray cloud)
 6. Save and wait for DNS propagation (can take a few minutes to 24 hours)
 7. Return to Marketplace and click "Verify"
 
@@ -136,9 +136,9 @@ To enable GitHub Pages:
 1. Go to repository Settings
 2. Navigate to Pages (left sidebar)
 3. Under "Build and deployment":
-   - Source: Deploy from a branch
-   - Branch: `main`
-   - Folder: `/pages` (or `/root` if your index.html is in root)
+	- Source: Deploy from a branch
+	- Branch: `main`
+	- Folder: `/pages` (or `/root` if your index.html is in root)
 4. Click Save
 
 GitHub will automatically deploy your site to: `https://theansarya.github.io/ansarya/`
@@ -208,9 +208,9 @@ TTL: Auto
 2. Set encryption mode to **"Full"** or **"Full (strict)"**
 3. Go to SSL/TLS → Edge Certificates
 4. Enable:
-   - ✅ Always Use HTTPS
-   - ✅ Automatic HTTPS Rewrites
-   - ✅ Minimum TLS Version: 1.2 (recommended)
+	- ✅ Always Use HTTPS
+	- ✅ Automatic HTTPS Rewrites
+	- ✅ Minimum TLS Version: 1.2 (recommended)
 
 Cloudflare will automatically provision a Universal SSL certificate (this can take 5 minutes to 24 hours).
 
@@ -218,12 +218,12 @@ Cloudflare will automatically provision a Universal SSL certificate (this can ta
 
 **Speed Optimization:**
 - Speed → Optimization
-  - ✅ Auto Minify (HTML, CSS, JS)
-  - ✅ Brotli compression
+	- ✅ Auto Minify (HTML, CSS, JS)
+	- ✅ Brotli compression
 
 **Caching:**
 - Caching → Configuration
-  - Browser Cache TTL: 4 hours (or as preferred)
+	- Browser Cache TTL: 4 hours (or as preferred)
 
 **Page Rules (Optional):**
 Create a page rule to force HTTPS:

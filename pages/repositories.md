@@ -34,10 +34,10 @@ A comprehensive overview of all repositories under [TheAnsarya](https://github.c
 - **Marketplace:** [TheAnsarya.poppy-assembly](https://marketplace.visualstudio.com/items?itemName=TheAnsarya.poppy-assembly)
 - **Description:** Comprehensive assembly language support for Visual Studio Code
 - **Features:**
-  - Syntax highlighting for multiple assembly dialects
-  - IntelliSense and code completion
-  - Debugging support
-  - Code navigation and refactoring
+	- Syntax highlighting for multiple assembly dialects
+	- IntelliSense and code completion
+	- Debugging support
+	- Code navigation and refactoring
 
 ---
 
@@ -49,10 +49,10 @@ A comprehensive overview of all repositories under [TheAnsarya](https://github.c
 - **Status:** Active
 - **Description:** All the information I have on the Dragon Warrior Games
 - **Contents:**
-  - Game mechanics documentation
-  - ROM structure analysis
-  - Data tables and formulas
-  - Reverse engineering notes
+	- Game mechanics documentation
+	- ROM structure analysis
+	- Data tables and formulas
+	- Reverse engineering notes
 
 ### ⚔️ [ffmq-info](https://github.com/TheAnsarya/ffmq-info)
 **Final Fantasy: Mystic Quest Information and Disassembly**
@@ -61,10 +61,10 @@ A comprehensive overview of all repositories under [TheAnsarya](https://github.c
 - **Stars:** ⭐ 4
 - **Description:** Information and disassembly for Final Fantasy: Mystic Quest (SNES)
 - **Features:**
-  - Complete game disassembly
-  - Detailed code documentation
-  - ROM structure maps
-  - Modding guides and resources
+	- Complete game disassembly
+	- Detailed code documentation
+	- ROM structure maps
+	- Modding guides and resources
 
 ### 🐉 [dq4r-info](https://github.com/TheAnsarya/dq4r-info)
 **Dragon Quest IV Remake Information**
@@ -83,10 +83,10 @@ A comprehensive overview of all repositories under [TheAnsarya](https://github.c
 - **Status:** Active (Created Jan 2026)
 - **Description:** Tools for round-trip SNES music editing workflow
 - **Features:**
-  - SPC to Ableton Live project conversion
-  - MIDI extraction from SPC files
-  - Audio export with proper sample mapping
-  - Workflow automation for music editing
+	- SPC to Ableton Live project conversion
+	- MIDI extraction from SPC files
+	- Audio export with proper sample mapping
+	- Workflow automation for music editing
 - **Related Epic:** [SNES Music Editing Workflow](https://github.com/TheAnsarya/GameInfo/issues/170)
 
 ### 🎼 [rozzy-retro](https://github.com/TheAnsarya/rozzy-retro)
@@ -106,9 +106,9 @@ A comprehensive overview of all repositories under [TheAnsarya](https://github.c
 - **Status:** Stable
 - **Description:** Lightweight and efficient logging solution
 - **Features:**
-  - Minimal overhead
-  - Easy integration
-  - Flexible configuration
+	- Minimal overhead
+	- Easy integration
+	- Flexible configuration
 
 ### 🩹 [bps-patch](https://github.com/TheAnsarya/bps-patch)
 **BPS Patch File Handler**
@@ -118,9 +118,9 @@ A comprehensive overview of all repositories under [TheAnsarya](https://github.c
 - **Status:** Stable
 - **Description:** Library for creating and applying BPS patch files
 - **Use Cases:**
-  - ROM patching
-  - Binary diff/patch operations
-  - Game modding workflows
+	- ROM patching
+	- Binary diff/patch operations
+	- Game modding workflows
 
 ### 📦 [subrom](https://github.com/TheAnsarya/subrom)
 **Efficient ROM Manager**
@@ -129,10 +129,10 @@ A comprehensive overview of all repositories under [TheAnsarya](https://github.c
 - **Status:** Active
 - **Description:** ROM Manager made as an efficient alternative to RomVault
 - **Features:**
-  - Fast ROM organization
-  - Duplicate detection
-  - Hash verification
-  - Collection management
+	- Fast ROM organization
+	- Duplicate detection
+	- Hash verification
+	- Collection management
 
 ---
 
