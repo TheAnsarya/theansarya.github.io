@@ -273,10 +273,25 @@ In your GitHub repository Settings → Pages, you should see:
 
 ## Additional Resources
 
+### Documentation & Guides
 - [GitHub Pages Custom Domain Docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
 - [Cloudflare DNS Documentation](https://developers.cloudflare.com/dns/)
 - [GitHub Pages IP Addresses](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
 - [Cloudflare SSL/TLS Modes](https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes/)
+
+### Configuration Panels
+- [GoDaddy Domain Management](https://godaddy.com/)
+- [GitHub Pages Settings](https://github.com/TheAnsarya/theansarya.github.io/settings/pages)
+- [Cloudflare Dashboard](https://dash.cloudflare.com/)
+- [Visual Studio Marketplace Publisher Dashboard](https://marketplace.visualstudio.com/manage/publishers/TheAnsarya)
+
+### Testing & Verification Tools
+- [DNS Propagation Checker](https://www.whatsmydns.net/#A/ansarya.com)
+- [DNS Checker](https://dnschecker.org/)
+
+### Marketplace & Extension
+- [Poppy Assembly Extension](https://marketplace.visualstudio.com/items?itemName=TheAnsarya.poppy-assembly)
+- [TheAnsarya Publisher Profile](https://marketplace.visualstudio.com/publishers/TheAnsarya)
 
 ---
 
