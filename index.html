@@ -688,30 +688,6 @@
 		}
 
 		/* ===== VEGETATION DECORATIONS ===== */
-		/* Floating leaves */
-		.leaf-float {
-			position: fixed;
-			pointer-events: none;
-			z-index: 1;
-			opacity: 0.15;
-			font-size: 2rem;
-			animation: leaf-drift 20s ease-in-out infinite;
-		}
-
-		.leaf-1 { top: 15%; left: 5%; animation-delay: 0s; }
-		.leaf-2 { top: 35%; right: 8%; animation-delay: -5s; }
-		.leaf-3 { top: 55%; left: 3%; animation-delay: -10s; }
-		.leaf-4 { top: 75%; right: 5%; animation-delay: -15s; }
-		.leaf-5 { top: 25%; right: 3%; animation-delay: -3s; font-size: 1.5rem; }
-		.leaf-6 { top: 65%; left: 7%; animation-delay: -8s; font-size: 1.5rem; }
-
-		@keyframes leaf-drift {
-			0%, 100% { transform: translateY(0) rotate(0deg); }
-			25% { transform: translateY(-15px) rotate(5deg); }
-			50% { transform: translateY(5px) rotate(-3deg); }
-			75% { transform: translateY(-10px) rotate(2deg); }
-		}
-
 		/* Vine borders */
 		.vine-corner {
 			position: absolute;
@@ -725,23 +701,6 @@
 		.vine-bottom-left { bottom: var(--space-2); left: var(--space-2); transform: scaleY(-1); }
 		.vine-bottom-right { bottom: var(--space-2); right: var(--space-2); transform: scale(-1); }
 
-		/* Section vegetation accents */
-		section {
-			position: relative;
-		}
-
-		.section-header::before,
-		.section-header::after {
-			content: '🌿';
-			position: absolute;
-			top: 0;
-			font-size: 1.5rem;
-			opacity: 0.2;
-		}
-
-		.section-header::before { left: var(--space-4); }
-		.section-header::after { right: var(--space-4); transform: scaleX(-1); }
-
 		/* Card vegetation hover effects */
 		.card::after {
 			content: '🍃';
@@ -750,14 +709,15 @@
 			right: -20px;
 			font-size: 2rem;
 			opacity: 0;
-			transition: all 0.3s ease;
-			transform: rotate(45deg);
+			transition: all 0.4s ease;
+			transform: rotate(0deg);
 		}
 
 		.card:hover::after {
 			opacity: 0.3;
 			bottom: var(--space-2);
 			right: var(--space-2);
+			transform: rotate(45deg);
 		}
 		.veg-border-top {
 			border-top: 3px solid;
@@ -918,14 +878,6 @@
 <body>
 	<!-- Subtle TV scanline overlay -->
 	<div class="tv-effect" aria-hidden="true"></div>
-
-	<!-- Floating vegetation decorations -->
-	<div class="leaf-float leaf-1" aria-hidden="true">🍃</div>
-	<div class="leaf-float leaf-2" aria-hidden="true">🌿</div>
-	<div class="leaf-float leaf-3" aria-hidden="true">🍂</div>
-	<div class="leaf-float leaf-4" aria-hidden="true">🌱</div>
-	<div class="leaf-float leaf-5" aria-hidden="true">🌾</div>
-	<div class="leaf-float leaf-6" aria-hidden="true">☘️</div>
 
 	<header>
 		<!-- Vine corner decorations -->
