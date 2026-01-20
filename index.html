@@ -652,7 +652,113 @@
 			font-weight: 700;
 		}
 
+		/* Clickable howto cards */
+		.howto-link {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			transition: all 0.3s ease;
+		}
+
+		.howto-link:hover {
+			transform: translateY(-4px);
+			box-shadow: var(--shadow-lg), var(--shadow-glow);
+			border-color: var(--green-fern);
+			color: inherit;
+		}
+
+		.howto-link:hover .howto-header {
+			background: linear-gradient(135deg, var(--green-forest) 0%, var(--green-dark) 100%);
+		}
+
+		.howto-more {
+			display: block;
+			text-align: right;
+			margin-top: var(--space-4);
+			padding-top: var(--space-3);
+			border-top: 1px solid var(--border-color);
+			color: var(--green-moss);
+			font-size: var(--text-sm);
+			font-weight: 700;
+			transition: color 0.2s ease;
+		}
+
+		.howto-link:hover .howto-more {
+			color: var(--orange-sunset);
+		}
+
 		/* ===== VEGETATION DECORATIONS ===== */
+		/* Floating leaves */
+		.leaf-float {
+			position: fixed;
+			pointer-events: none;
+			z-index: 1;
+			opacity: 0.15;
+			font-size: 2rem;
+			animation: leaf-drift 20s ease-in-out infinite;
+		}
+
+		.leaf-1 { top: 15%; left: 5%; animation-delay: 0s; }
+		.leaf-2 { top: 35%; right: 8%; animation-delay: -5s; }
+		.leaf-3 { top: 55%; left: 3%; animation-delay: -10s; }
+		.leaf-4 { top: 75%; right: 5%; animation-delay: -15s; }
+		.leaf-5 { top: 25%; right: 3%; animation-delay: -3s; font-size: 1.5rem; }
+		.leaf-6 { top: 65%; left: 7%; animation-delay: -8s; font-size: 1.5rem; }
+
+		@keyframes leaf-drift {
+			0%, 100% { transform: translateY(0) rotate(0deg); }
+			25% { transform: translateY(-15px) rotate(5deg); }
+			50% { transform: translateY(5px) rotate(-3deg); }
+			75% { transform: translateY(-10px) rotate(2deg); }
+		}
+
+		/* Vine borders */
+		.vine-corner {
+			position: absolute;
+			font-size: 2rem;
+			opacity: 0.25;
+			z-index: 1;
+		}
+
+		.vine-top-left { top: var(--space-2); left: var(--space-2); }
+		.vine-top-right { top: var(--space-2); right: var(--space-2); transform: scaleX(-1); }
+		.vine-bottom-left { bottom: var(--space-2); left: var(--space-2); transform: scaleY(-1); }
+		.vine-bottom-right { bottom: var(--space-2); right: var(--space-2); transform: scale(-1); }
+
+		/* Section vegetation accents */
+		section {
+			position: relative;
+		}
+
+		.section-header::before,
+		.section-header::after {
+			content: '🌿';
+			position: absolute;
+			top: 0;
+			font-size: 1.5rem;
+			opacity: 0.2;
+		}
+
+		.section-header::before { left: var(--space-4); }
+		.section-header::after { right: var(--space-4); transform: scaleX(-1); }
+
+		/* Card vegetation hover effects */
+		.card::after {
+			content: '🍃';
+			position: absolute;
+			bottom: -20px;
+			right: -20px;
+			font-size: 2rem;
+			opacity: 0;
+			transition: all 0.3s ease;
+			transform: rotate(45deg);
+		}
+
+		.card:hover::after {
+			opacity: 0.3;
+			bottom: var(--space-2);
+			right: var(--space-2);
+		}
 		.veg-border-top {
 			border-top: 3px solid;
 			border-image: linear-gradient(
@@ -813,7 +919,19 @@
 	<!-- Subtle TV scanline overlay -->
 	<div class="tv-effect" aria-hidden="true"></div>
 
+	<!-- Floating vegetation decorations -->
+	<div class="leaf-float leaf-1" aria-hidden="true">🍃</div>
+	<div class="leaf-float leaf-2" aria-hidden="true">🌿</div>
+	<div class="leaf-float leaf-3" aria-hidden="true">🍂</div>
+	<div class="leaf-float leaf-4" aria-hidden="true">🌱</div>
+	<div class="leaf-float leaf-5" aria-hidden="true">🌾</div>
+	<div class="leaf-float leaf-6" aria-hidden="true">☘️</div>
+
 	<header>
+		<!-- Vine corner decorations -->
+		<span class="vine-corner vine-top-left" aria-hidden="true">🌿</span>
+		<span class="vine-corner vine-top-right" aria-hidden="true">🌿</span>
+
 		<div class="container">
 			<div class="logo-container">
 				<a href="/" title="Ansarya Home">
@@ -1115,7 +1233,7 @@
 
 				<div class="howto-grid">
 					<!-- Disassemble a ROM -->
-					<div class="howto-card">
+					<a href="pages/howto.html#peony-disassembly" class="howto-card howto-link">
 						<div class="howto-header">
 							<h4>🌺 Disassemble a ROM with Peony</h4>
 						</div>
@@ -1127,11 +1245,12 @@
 								<li>Open the output in VS Code with Poppy extension for syntax highlighting</li>
 								<li>Edit labels, add comments, and refine the disassembly</li>
 							</ol>
+							<span class="howto-more">Read full guide →</span>
 						</div>
-					</div>
+					</a>
 
 					<!-- Assemble with Poppy -->
-					<div class="howto-card">
+					<a href="pages/howto.html#poppy-assembly" class="howto-card howto-link">
 						<div class="howto-header">
 							<h4>🌸 Build a ROM with Poppy</h4>
 						</div>
@@ -1143,11 +1262,12 @@
 								<li>Poppy validates, assembles, and generates the ROM</li>
 								<li>Test in Mesen2 or your favorite emulator</li>
 							</ol>
+							<span class="howto-more">Read full guide →</span>
 						</div>
-					</div>
+					</a>
 
 					<!-- Using Pansy Metadata -->
-					<div class="howto-card">
+					<a href="pages/howto.html#pansy-metadata" class="howto-card howto-link">
 						<div class="howto-header">
 							<h4>🌼 Share Metadata with Pansy</h4>
 						</div>
@@ -1159,11 +1279,12 @@
 								<li>Share the <code>.pansy</code> file with collaborators</li>
 								<li>Import into Peony, Poppy, or other compatible tools</li>
 							</ol>
+							<span class="howto-more">Read full guide →</span>
 						</div>
-					</div>
+					</a>
 
 					<!-- Full Roundtrip -->
-					<div class="howto-card">
+					<a href="pages/howto.html#roundtrip" class="howto-card howto-link">
 						<div class="howto-header">
 							<h4>🔄 Complete Roundtrip Workflow</h4>
 						</div>
@@ -1175,8 +1296,9 @@
 								<li>Reassemble with Poppy to create a modified ROM</li>
 								<li>Verify byte-identical output (for vanilla) or test your changes</li>
 							</ol>
+							<span class="howto-more">Read full guide →</span>
 						</div>
-					</div>
+					</a>
 				</div>
 
 				<div style="text-align: center; margin-top: var(--space-8);">
@@ -1247,6 +1369,10 @@
 	</main>
 
 	<footer>
+		<!-- Vine corner decorations -->
+		<span class="vine-corner vine-bottom-left" aria-hidden="true">🌿</span>
+		<span class="vine-corner vine-bottom-right" aria-hidden="true">🌿</span>
+
 		<div class="container footer-content">
 			<nav class="footer-links">
 				<a href="https://github.com/TheAnsarya">GitHub</a>
@@ -1263,7 +1389,7 @@
 			</p>
 
 			<div class="footer-decoration" aria-hidden="true">
-				🌿 🦕 🌸 🌿
+				🌿 🦕 🌸 🌺 🌼 🌷 🦕 🌿
 			</div>
 		</div>
 	</footer>
