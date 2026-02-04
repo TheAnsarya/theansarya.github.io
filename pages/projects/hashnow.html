@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="HashNow - Compute 58+ hash algorithms from Windows Explorer context menu">
+	<title>#️⃣ HashNow - Ansarya</title>
+
+	<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/vhs-effect-lite.css">
+	<link rel="stylesheet" href="../../assets/project-page.css">
+</head>
+<body>
+	<nav class="nav-bar">
+		<div class="container nav-content">
+			<a href="../../index.html" class="nav-brand">
+				<img src="../../assets/favicon.svg" alt="Ansarya">
+				<span>🦕 Ansarya</span>
+			</a>
+			<div class="nav-links">
+				<a href="../../index.html">Home</a>
+				<a href="../repositories.html">Repositories</a>
+				<a href="../howto.html">How-To</a>
+				<a href="https://github.com/TheAnsarya" target="_blank">GitHub</a>
+			</div>
+		</div>
+	</nav>
+
+	<header class="project-header">
+		<div class="container">
+			<span class="project-icon">#️⃣</span>
+			<h1>HashNow</h1>
+			<p class="project-tagline">Compute 58+ hash algorithms from Windows Explorer</p>
+
+			<div class="project-actions">
+				<a href="https://github.com/TheAnsarya/HashNow" class="btn btn-primary btn-large" target="_blank" rel="noopener">
+					<span>⭐</span> View on GitHub
+				</a>
+				<a href="https://github.com/TheAnsarya/HashNow/releases" class="btn btn-secondary" target="_blank" rel="noopener">
+					<span>📥</span> Download Release
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<section class="project-overview">
+				<h2>Overview</h2>
+				<p>
+					<strong>HashNow</strong> is a Windows utility that computes 58+ hash algorithms with a
+					single right-click. Install the context menu handler, then right-click any file and
+					select "Hash this file now" to generate comprehensive hash results.
+				</p>
+				<p>
+					Output is saved as a JSON file next to the original file, making it perfect for
+					ROM verification, file integrity checking, and archival purposes. Uses
+					<a href="streamhash.html">StreamHash</a> for fast non-cryptographic hashes and
+					BouncyCastle for cryptographic algorithms.
+				</p>
+			</section>
+
+			<section class="feature-grid">
+				<h2>Features</h2>
+				<div class="features">
+					<div class="feature-card">
+						<span class="feature-icon">🖱️</span>
+						<h3>Right-Click Integration</h3>
+						<p>Windows Explorer context menu integration for instant file hashing.</p>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon">📊</span>
+						<h3>58+ Algorithms</h3>
+						<p>From CRC32 to SHA3-512, BLAKE3, Whirlpool, Tiger, and many more.</p>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon">📁</span>
+						<h3>JSON Output</h3>
+						<p>Machine-readable output with all hash values in a single file.</p>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon">⚡</span>
+						<h3>Single-Pass</h3>
+						<p>All 58 hashes computed in a single pass through the file for maximum speed.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="quick-start">
+				<h2>Quick Start</h2>
+				<div class="terminal-block">
+					<pre><code>$ hashnow --install
+HashNow Context Menu Installer
+✓ Context menu handler registered successfully.
+  Right-click any file and select "Hash this file now".
+
+$ hashnow --uninstall
+✓ Context menu handler removed.</code></pre>
+				</div>
+				<h3>CLI Usage</h3>
+				<div class="terminal-block">
+					<pre><code>$ hashnow game.nes
+HashNow v1.1.0
+Computing 58 hash algorithms...
+
+✓ Hashes saved to: game.nes.hashes.json
+
+$ type game.nes.hashes.json
+{
+  "fileName": "game.nes",
+  "fileSize": 524304,
+  "crc32": "a1b2c3d4",
+  "md5": "d41d8cd98f00b204e9800998ecf8427e",
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4...",
+  "murmurHash3_128": "6af1df4d9d3bc9ec...",
+  ...
+}</code></pre>
+				</div>
+			</section>
+
+			<section class="feature-grid">
+				<h2>Hash Algorithm Categories</h2>
+				<div class="algorithm-list">
+					<div class="algo-category">
+						<h4>Checksums & CRCs (6)</h4>
+						<p>CRC32, CRC32C, CRC64, Adler-32, Fletcher-16, Fletcher-32</p>
+					</div>
+					<div class="algo-category">
+						<h4>Fast Non-Crypto (12)</h4>
+						<p>xxHash32/64/3/128, MurmurHash3-32/128, CityHash64/128, FarmHash64, SpookyV2, SipHash, HighwayHash64</p>
+					</div>
+					<div class="algo-category">
+						<h4>Cryptographic (26)</h4>
+						<p>MD2, MD4, MD5, SHA-0/1, SHA-224/256/384/512, SHA3-224/256/384/512, Keccak, BLAKE-256/512, BLAKE2b/2s, BLAKE3, RIPEMD-128/160/256/320</p>
+					</div>
+					<div class="algo-category">
+						<h4>Other Crypto (14)</h4>
+						<p>Whirlpool, Tiger-192, GOST-94, Streebog-256/512, Skein-256/512/1024, Groestl-256/512, JH, KangarooTwelve, SM3</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="project-meta">
+				<h2>Project Info</h2>
+				<dl class="meta-list">
+					<dt>Language</dt>
+					<dd>C# (.NET 10)</dd>
+					<dt>Platform</dt>
+					<dd>Windows</dd>
+					<dt>License</dt>
+					<dd>The Unlicense (Public Domain)</dd>
+					<dt>Version</dt>
+					<dd>1.1.0</dd>
+					<dt>Dependencies</dt>
+					<dd><a href="streamhash.html">StreamHash</a>, BouncyCastle</dd>
+				</dl>
+			</section>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>
+				© 2026 <a href="https://github.com/TheAnsarya">TheAnsarya</a> ·
+				<a href="../../index.html">Home</a> ·
+				<a href="https://github.com/TheAnsarya/HashNow" target="_blank">GitHub</a>
+			</p>
+		</div>
+	</footer>
+
+	<script src="../../assets/vhs-effect-lite.js"></script>
+	<script>VHSEffect.init();</script>
+</body>
+</html>

@@ -513,6 +513,9 @@
 		.tag-python { color: #3572a5; border: 1px solid #3572a5; }
 		.tag-typescript { color: #3178c6; border: 1px solid #3178c6; }
 		.tag-assembly { color: var(--orange-sunset); border: 1px solid var(--orange-sunset); }
+		.tag-nuget { color: #004880; border: 1px solid #004880; }
+		.tag-windows { color: #00a4ef; border: 1px solid #00a4ef; }
+		.tag-vscode { color: #007acc; border: 1px solid #007acc; }
 
 		/* ===== FLOWER TOOLCHAIN SECTION ===== */
 		.flower-toolchain {
@@ -967,6 +970,54 @@
 				</div>
 			</section>
 
+			<!-- ===== PUBLISHED RELEASES ===== -->
+			<section id="releases" class="veg-border-top" style="padding-top: var(--space-8);">
+				<div class="section-header">
+					<h2 class="section-title">
+						<span class="icon">📦</span>
+						Published Releases
+					</h2>
+					<div class="section-divider"></div>
+					<p style="max-width: 700px; margin: var(--space-4) auto 0; text-align: center;">
+						Production-ready tools available on official marketplaces and package registries.
+					</p>
+				</div>
+
+				<div class="cards-grid">
+					<!-- Poppy VS Code Extension -->
+					<article class="card">
+						<a href="https://marketplace.visualstudio.com/items?itemName=TheAnsarya.poppy-assembly" class="card-link" target="_blank" rel="noopener">
+							<span class="card-icon">🧩</span>
+							<h3 class="card-title">Poppy Assembly Extension</h3>
+							<p class="card-description">
+								VS Code extension for Poppy Assembly (.pasm) files. Syntax highlighting,
+								code snippets, and language support for NES, SNES, and Game Boy assembly.
+							</p>
+							<div class="card-meta">
+								<span class="card-tag tag-vscode">VS Code</span>
+								<span class="card-tag tag-assembly">6502/65816</span>
+							</div>
+						</a>
+					</article>
+
+					<!-- StreamHash NuGet -->
+					<article class="card">
+						<a href="https://www.nuget.org/packages/StreamHash" class="card-link" target="_blank" rel="noopener">
+							<span class="card-icon">🌊</span>
+							<h3 class="card-title">StreamHash NuGet Package</h3>
+							<p class="card-description">
+								High-performance streaming hash library for .NET 10+. MurmurHash, CityHash,
+								SpookyHash, SipHash, HighwayHash, KangarooTwelve with unified HashFacade API.
+							</p>
+							<div class="card-meta">
+								<span class="card-tag tag-nuget">NuGet</span>
+								<span class="card-tag tag-csharp">C# .NET 10</span>
+							</div>
+						</a>
+					</article>
+				</div>
+			</section>
+
 			<!-- ===== FEATURED PROJECTS ===== -->
 			<section id="projects">
 				<div class="section-header">
@@ -1120,6 +1171,40 @@
 							</p>
 							<div class="card-meta">
 								<span class="card-tag tag-csharp">C#</span>
+							</div>
+						</a>
+					</article>
+
+					<!-- ===== UTILITIES & LIBRARIES ===== -->
+
+					<!-- StreamHash -->
+					<article class="card">
+						<a href="pages/projects/streamhash.html" class="card-link">
+							<span class="card-icon">🌊</span>
+							<h3 class="card-title">StreamHash</h3>
+							<p class="card-description">
+								High-performance streaming hash library for .NET 10+. Native implementations
+								of MurmurHash, CityHash, SpookyHash, SipHash, HighwayHash, and more.
+							</p>
+							<div class="card-meta">
+								<span class="card-tag tag-csharp">C# .NET 10</span>
+								<span class="card-tag tag-nuget">NuGet</span>
+							</div>
+						</a>
+					</article>
+
+					<!-- HashNow -->
+					<article class="card">
+						<a href="pages/projects/hashnow.html" class="card-link">
+							<span class="card-icon">#️⃣</span>
+							<h3 class="card-title">HashNow</h3>
+							<p class="card-description">
+								Compute 58+ hash algorithms instantly from Windows Explorer context menu.
+								Right-click any file to generate comprehensive hash results in JSON format.
+							</p>
+							<div class="card-meta">
+								<span class="card-tag tag-csharp">C# .NET 10</span>
+								<span class="card-tag tag-windows">Windows</span>
 							</div>
 						</a>
 					</article>

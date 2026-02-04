@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="StreamHash - High-performance streaming hash library for .NET 10+">
+	<title>🌊 StreamHash - Ansarya</title>
+
+	<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/vhs-effect-lite.css">
+	<link rel="stylesheet" href="../../assets/project-page.css">
+</head>
+<body>
+	<nav class="nav-bar">
+		<div class="container nav-content">
+			<a href="../../index.html" class="nav-brand">
+				<img src="../../assets/favicon.svg" alt="Ansarya">
+				<span>🦕 Ansarya</span>
+			</a>
+			<div class="nav-links">
+				<a href="../../index.html">Home</a>
+				<a href="../repositories.html">Repositories</a>
+				<a href="../howto.html">How-To</a>
+				<a href="https://github.com/TheAnsarya" target="_blank">GitHub</a>
+			</div>
+		</div>
+	</nav>
+
+	<header class="project-header">
+		<div class="container">
+			<span class="project-icon">🌊</span>
+			<h1>StreamHash</h1>
+			<p class="project-tagline">High-performance streaming hash library for .NET 10+</p>
+
+			<div class="project-actions">
+				<a href="https://github.com/TheAnsarya/StreamHash" class="btn btn-primary btn-large" target="_blank" rel="noopener">
+					<span>⭐</span> View on GitHub
+				</a>
+				<a href="https://www.nuget.org/packages/StreamHash" class="btn btn-secondary" target="_blank" rel="noopener">
+					<span>📦</span> NuGet Package
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<section class="project-overview">
+				<h2>Overview</h2>
+				<p>
+					<strong>StreamHash</strong> provides native, high-performance implementations of fast
+					non-cryptographic hash algorithms for .NET 10+. Process data incrementally with streaming
+					APIs—perfect for large files, network streams, or real-time data processing.
+				</p>
+				<p>
+					Version 1.3.0 includes 21 native algorithm implementations with a unified <code>HashFacade</code>
+					API that automatically selects the best implementation available. Algorithms that aren't
+					natively implemented will use BouncyCastle or System.Security.Cryptography fallbacks.
+				</p>
+			</section>
+
+			<section class="feature-grid">
+				<h2>Native Implementations</h2>
+				<div class="features">
+					<div class="feature-card">
+						<span class="feature-icon">🏃</span>
+						<h3>MurmurHash3</h3>
+						<p>32-bit and 128-bit variants. The most popular fast hash for hash tables and checksums.</p>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon">🌆</span>
+						<h3>CityHash</h3>
+						<p>Google's 64-bit and 128-bit hash. Excellent for short strings and hash tables.</p>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon">👻</span>
+						<h3>SpookyHash V2</h3>
+						<p>Bob Jenkins' 128-bit hash. Very fast on long inputs with excellent distribution.</p>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon">🔑</span>
+						<h3>SipHash</h3>
+						<p>SipHash-2-4 64-bit keyed hash. Secure against hash-flood DoS attacks.</p>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon">🛣️</span>
+						<h3>HighwayHash</h3>
+						<p>Google's SIMD-accelerated 64-bit keyed hash. Extremely fast on modern CPUs.</p>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon">🦘</span>
+						<h3>KangarooTwelve</h3>
+						<p>XOF (extendable output) hash from the SHA-3 family. Fast and flexible output length.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="quick-start">
+				<h2>Quick Start</h2>
+				<div class="terminal-block">
+					<pre><code>$ dotnet add package StreamHash</code></pre>
+				</div>
+				<h3>Unified HashFacade API</h3>
+				<div class="code-block">
+					<pre><code class="language-csharp">using StreamHash.Core;
+
+// One-shot hashing - returns byte array
+byte[] hash = HashFacade.Hash(HashAlgorithm.MurmurHash3_128, data);
+
+// One-shot to hex string
+string hex = HashFacade.HashHex(HashAlgorithm.CityHash64, data);
+
+// Streaming for large files
+using var stream = File.OpenRead("large-file.bin");
+byte[] hash = HashFacade.Hash(HashAlgorithm.SpookyHashV2, stream);
+
+// Create reusable streaming instance
+var hasher = HashFacade.CreateStreaming(HashAlgorithm.SipHash_2_4);
+hasher.Update(chunk1);
+hasher.Update(chunk2);
+byte[] result = hasher.Finalize();</code></pre>
+				</div>
+				<h3>Keyed Hashing</h3>
+				<div class="code-block">
+					<pre><code class="language-csharp">// SipHash with custom key (16 bytes)
+byte[] key = new byte[16] { /* your key */ };
+byte[] hash = HashFacade.HashKeyed(HashAlgorithm.SipHash_2_4, data, key);
+
+// HighwayHash with key (32 bytes)
+byte[] highwayKey = new byte[32] { /* your key */ };
+byte[] hash = HashFacade.HashKeyed(HashAlgorithm.HighwayHash64, data, highwayKey);</code></pre>
+				</div>
+			</section>
+
+			<section class="feature-grid">
+				<h2>All 62 Algorithms</h2>
+				<div class="algorithm-list">
+					<div class="algo-category">
+						<h4>Fast Non-Crypto (Native)</h4>
+						<p>MurmurHash3-32/128, CityHash64/128, SpookyHashV2, SipHash-2-4, HighwayHash64, KangarooTwelve</p>
+					</div>
+					<div class="algo-category">
+						<h4>Checksums (Built-in)</h4>
+						<p>CRC32, CRC32C, CRC64, XxHash32, XxHash64, XxHash3, XxHash128</p>
+					</div>
+					<div class="algo-category">
+						<h4>Cryptographic (System/BouncyCastle)</h4>
+						<p>MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256/384/512, BLAKE2b/2s, BLAKE3, Whirlpool, Tiger, RIPEMD-160, and many more</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="project-meta">
+				<h2>Project Info</h2>
+				<dl class="meta-list">
+					<dt>Language</dt>
+					<dd>C# (.NET 10)</dd>
+					<dt>License</dt>
+					<dd>The Unlicense (Public Domain)</dd>
+					<dt>Version</dt>
+					<dd>1.3.0</dd>
+					<dt>NuGet</dt>
+					<dd><a href="https://www.nuget.org/packages/StreamHash" target="_blank">StreamHash</a></dd>
+					<dt>Tests</dt>
+					<dd>619 tests passing</dd>
+				</dl>
+			</section>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>
+				© 2026 <a href="https://github.com/TheAnsarya">TheAnsarya</a> ·
+				<a href="../../index.html">Home</a> ·
+				<a href="https://github.com/TheAnsarya/StreamHash" target="_blank">GitHub</a> ·
+				<a href="https://www.nuget.org/packages/StreamHash" target="_blank">NuGet</a>
+			</p>
+		</div>
+	</footer>
+
+	<script src="../../assets/vhs-effect-lite.js"></script>
+	<script>VHSEffect.init();</script>
+</body>
+</html>
