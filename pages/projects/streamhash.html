@@ -3,15 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="StreamHash - High-performance streaming hash library for .NET 10+">
+	<meta name="description" content="StreamHash - High-performance streaming hash library for .NET 10+ with 70 algorithms">
 	<title>🌊 StreamHash - Ansarya</title>
 
 	<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../assets/vhs-effect-lite.css">
 	<link rel="stylesheet" href="../../assets/project-page.css">
+	<style>
+		/* Fix NuGet link purple text - use orange/gold for readability */
+		.meta-list dd a,
+		footer a {
+			color: var(--orange-sunset, #f4a460);
+		}
+		.meta-list dd a:hover,
+		footer a:hover {
+			color: var(--cream-light, #f5e6d3);
+			text-decoration: underline;
+		}
+	</style>
 </head>
 <body>
 	<nav class="nav-bar">
@@ -51,49 +63,90 @@
 			<section class="project-overview">
 				<h2>Overview</h2>
 				<p>
-					<strong>StreamHash</strong> provides native, high-performance implementations of fast
-					non-cryptographic hash algorithms for .NET 10+. Process data incrementally with streaming
+					<strong>StreamHash</strong> provides native, high-performance streaming implementations of
+					popular hash algorithms for .NET 10+. Process data incrementally with streaming
 					APIs—perfect for large files, network streams, or real-time data processing.
 				</p>
 				<p>
-					Version 1.3.0 includes 21 native algorithm implementations with a unified <code>HashFacade</code>
-					API that automatically selects the best implementation available. Algorithms that aren't
-					natively implemented will use BouncyCastle or System.Security.Cryptography fallbacks.
+					Version 1.8.0 includes 16 native streaming implementations and a unified <code>HashFacade</code>
+					API supporting <strong>all 70 algorithms</strong>. Hash multi-gigabyte files with minimal memory
+					footprint (~16MB regardless of file size). Algorithms without native implementations use
+					BouncyCastle or System.Security.Cryptography fallbacks.
 				</p>
 			</section>
 
 			<section class="feature-grid">
-				<h2>Native Implementations</h2>
+				<h2>Native Streaming Implementations (16)</h2>
 				<div class="features">
 					<div class="feature-card">
-						<span class="feature-icon">🏃</span>
-						<h3>MurmurHash3</h3>
-						<p>32-bit and 128-bit variants. The most popular fast hash for hash tables and checksums.</p>
+						<a href="https://github.com/TheAnsarya/StreamHash/blob/main/docs/algorithms/murmurhash3.md" target="_blank" style="text-decoration: none; color: inherit;">
+							<span class="feature-icon">🏃</span>
+							<h3>MurmurHash3</h3>
+							<p>32-bit and 128-bit variants. The most popular fast hash for hash tables and checksums.</p>
+						</a>
 					</div>
 					<div class="feature-card">
-						<span class="feature-icon">🌆</span>
-						<h3>CityHash</h3>
-						<p>Google's 64-bit and 128-bit hash. Excellent for short strings and hash tables.</p>
+						<a href="https://github.com/TheAnsarya/StreamHash/blob/main/docs/algorithms/cityhash.md" target="_blank" style="text-decoration: none; color: inherit;">
+							<span class="feature-icon">🌆</span>
+							<h3>CityHash</h3>
+							<p>Google's 64-bit and 128-bit hash. Excellent for short strings and hash tables.</p>
+						</a>
 					</div>
 					<div class="feature-card">
-						<span class="feature-icon">👻</span>
-						<h3>SpookyHash V2</h3>
-						<p>Bob Jenkins' 128-bit hash. Very fast on long inputs with excellent distribution.</p>
+						<a href="https://github.com/TheAnsarya/StreamHash/blob/main/docs/algorithms/spookyhash.md" target="_blank" style="text-decoration: none; color: inherit;">
+							<span class="feature-icon">👻</span>
+							<h3>SpookyHash V2</h3>
+							<p>Bob Jenkins' 128-bit hash. Very fast on long inputs with excellent distribution.</p>
+						</a>
 					</div>
 					<div class="feature-card">
-						<span class="feature-icon">🔑</span>
-						<h3>SipHash</h3>
-						<p>SipHash-2-4 64-bit keyed hash. Secure against hash-flood DoS attacks.</p>
+						<a href="https://github.com/TheAnsarya/StreamHash/blob/main/docs/algorithms/siphash.md" target="_blank" style="text-decoration: none; color: inherit;">
+							<span class="feature-icon">🔑</span>
+							<h3>SipHash-2-4</h3>
+							<p>64-bit keyed hash. Secure against hash-flood DoS attacks with 128-bit key.</p>
+						</a>
 					</div>
 					<div class="feature-card">
-						<span class="feature-icon">🛣️</span>
-						<h3>HighwayHash</h3>
-						<p>Google's SIMD-accelerated 64-bit keyed hash. Extremely fast on modern CPUs.</p>
+						<a href="https://github.com/TheAnsarya/StreamHash/blob/main/docs/algorithms/highwayhash.md" target="_blank" style="text-decoration: none; color: inherit;">
+							<span class="feature-icon">🛣️</span>
+							<h3>HighwayHash</h3>
+							<p>Google's SIMD-accelerated 64-bit keyed hash. AVX2 optimized for modern CPUs.</p>
+						</a>
 					</div>
 					<div class="feature-card">
-						<span class="feature-icon">🦘</span>
-						<h3>KangarooTwelve</h3>
-						<p>XOF (extendable output) hash from the SHA-3 family. Fast and flexible output length.</p>
+						<a href="https://github.com/TheAnsarya/StreamHash/blob/main/docs/algorithms/README.md" target="_blank" style="text-decoration: none; color: inherit;">
+							<span class="feature-icon">🦘</span>
+							<h3>KangarooTwelve</h3>
+							<p>XOF (extendable output) hash from the SHA-3 family. Fast and flexible output length.</p>
+						</a>
+					</div>
+					<div class="feature-card">
+						<a href="https://github.com/TheAnsarya/StreamHash/blob/main/docs/algorithms/farmhash.md" target="_blank" style="text-decoration: none; color: inherit;">
+							<span class="feature-icon">🚜</span>
+							<h3>FarmHash64</h3>
+							<p>Google's CityHash successor. Optimized for 64-bit platforms, ~15 GB/s throughput.</p>
+						</a>
+					</div>
+					<div class="feature-card">
+						<a href="https://github.com/TheAnsarya/StreamHash/blob/main/docs/algorithms/README.md" target="_blank" style="text-decoration: none; color: inherit;">
+							<span class="feature-icon">🚇</span>
+							<h3>MetroHash</h3>
+							<p>64-bit and 128-bit variants. Designed for fast hashing on modern x64 CPUs.</p>
+						</a>
+					</div>
+					<div class="feature-card">
+						<a href="https://github.com/TheAnsarya/StreamHash/blob/main/docs/algorithms/README.md" target="_blank" style="text-decoration: none; color: inherit;">
+							<span class="feature-icon">🔥</span>
+							<h3>wyhash64</h3>
+							<p>Ultra-fast 64-bit hash. Simple design with excellent distribution properties.</p>
+						</a>
+					</div>
+					<div class="feature-card">
+						<a href="https://github.com/TheAnsarya/StreamHash/blob/main/docs/algorithms/README.md" target="_blank" style="text-decoration: none; color: inherit;">
+							<span class="feature-icon">⚡</span>
+							<h3>xxHash Family</h3>
+							<p>xxHash32/64/3/128 via System.IO.Hashing. The fastest general-purpose hash family.</p>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -101,54 +154,91 @@
 			<section class="quick-start">
 				<h2>Quick Start</h2>
 				<div class="terminal-block">
-					<pre><code>$ dotnet add package StreamHash</code></pre>
+					<pre><code>$ dotnet add package StreamHash --version 1.8.0</code></pre>
 				</div>
 				<h3>Unified HashFacade API</h3>
 				<div class="code-block">
 					<pre><code class="language-csharp">using StreamHash.Core;
 
 // One-shot hashing - returns byte array
-byte[] hash = HashFacade.Hash(HashAlgorithm.MurmurHash3_128, data);
+byte[] hash = HashFacade.ComputeHash(HashAlgorithm.MurmurHash3_128, data);
 
 // One-shot to hex string
-string hex = HashFacade.HashHex(HashAlgorithm.CityHash64, data);
+string hex = HashFacade.ComputeHashHex(HashAlgorithm.CityHash64, data);
 
 // Streaming for large files
 using var stream = File.OpenRead("large-file.bin");
-byte[] hash = HashFacade.Hash(HashAlgorithm.SpookyHashV2, stream);
+byte[] hash = HashFacade.ComputeHash(HashAlgorithm.SpookyHashV2, stream);
 
 // Create reusable streaming instance
-var hasher = HashFacade.CreateStreaming(HashAlgorithm.SipHash_2_4);
+using var hasher = HashFacade.CreateStreaming(HashAlgorithm.SipHash_2_4);
 hasher.Update(chunk1);
 hasher.Update(chunk2);
-byte[] result = hasher.Finalize();</code></pre>
+byte[] result = hasher.FinalizeBytes();</code></pre>
+				</div>
+				<h3>Batch Streaming (All 70 Algorithms)</h3>
+				<div class="code-block">
+					<pre><code class="language-csharp">// Hash a file with ALL 70 algorithms in parallel
+using var multi = HashFacade.CreateAllStreaming();
+
+using var stream = File.OpenRead("file.bin");
+byte[] buffer = new byte[16 * 1024 * 1024]; // 16MB buffer
+int read;
+while ((read = stream.Read(buffer)) > 0) {
+    multi.Update(buffer.AsSpan(0, read));
+}
+
+// Get all 70 hashes as hex strings
+Dictionary&lt;string, string&gt; results = multi.FinalizeAll();
+// results["SHA256"] = "abc123..."
+// results["MurmurHash3_128"] = "def456..."</code></pre>
 				</div>
 				<h3>Keyed Hashing</h3>
 				<div class="code-block">
 					<pre><code class="language-csharp">// SipHash with custom key (16 bytes)
 byte[] key = new byte[16] { /* your key */ };
-byte[] hash = HashFacade.HashKeyed(HashAlgorithm.SipHash_2_4, data, key);
+byte[] hash = HashFacade.ComputeHashKeyed(HashAlgorithm.SipHash_2_4, data, key);
 
 // HighwayHash with key (32 bytes)
 byte[] highwayKey = new byte[32] { /* your key */ };
-byte[] hash = HashFacade.HashKeyed(HashAlgorithm.HighwayHash64, data, highwayKey);</code></pre>
+byte[] hash = HashFacade.ComputeHashKeyed(HashAlgorithm.HighwayHash64, data, highwayKey);</code></pre>
 				</div>
 			</section>
 
 			<section class="feature-grid">
-				<h2>All 62 Algorithms</h2>
+				<h2>All 70 Algorithms</h2>
 				<div class="algorithm-list">
 					<div class="algo-category">
-						<h4>Fast Non-Crypto (Native)</h4>
-						<p>MurmurHash3-32/128, CityHash64/128, SpookyHashV2, SipHash-2-4, HighwayHash64, KangarooTwelve</p>
+						<h4>Checksums (9)</h4>
+						<p>CRC32, CRC32C, CRC64, CRC-16-CCITT, CRC-16-MODBUS, CRC-16-USB, Adler-32, Fletcher-16, Fletcher-32</p>
 					</div>
 					<div class="algo-category">
-						<h4>Checksums (Built-in)</h4>
-						<p>CRC32, CRC32C, CRC64, XxHash32, XxHash64, XxHash3, XxHash128</p>
+						<h4>Fast Non-Crypto (22)</h4>
+						<p>xxHash32/64/3/128, MurmurHash3-32/128, CityHash64/128, FarmHash64, SpookyHash128, SipHash-2-4, HighwayHash64, MetroHash64/128, wyhash64, FNV-1a (32/64), DJB2, DJB2a, SDBM, Lose Lose</p>
 					</div>
 					<div class="algo-category">
-						<h4>Cryptographic (System/BouncyCastle)</h4>
-						<p>MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256/384/512, BLAKE2b/2s, BLAKE3, Whirlpool, Tiger, RIPEMD-160, and many more</p>
+						<h4>MD Family (3)</h4>
+						<p>MD2, MD4, MD5</p>
+					</div>
+					<div class="algo-category">
+						<h4>SHA-1/2 Family (9)</h4>
+						<p>SHA-0, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256</p>
+					</div>
+					<div class="algo-category">
+						<h4>SHA-3 & Keccak (6)</h4>
+						<p>SHA3-224, SHA3-256, SHA3-384, SHA3-512, Keccak-256, Keccak-512</p>
+					</div>
+					<div class="algo-category">
+						<h4>BLAKE Family (5)</h4>
+						<p>BLAKE-256, BLAKE-512, BLAKE2b, BLAKE2s, BLAKE3</p>
+					</div>
+					<div class="algo-category">
+						<h4>RIPEMD Family (4)</h4>
+						<p>RIPEMD-128, RIPEMD-160, RIPEMD-256, RIPEMD-320</p>
+					</div>
+					<div class="algo-category">
+						<h4>Other Cryptographic (14)</h4>
+						<p>Whirlpool, Tiger-192, GOST R 34.11-94, Streebog-256, Streebog-512, Skein-256, Skein-512, Skein-1024, Grøstl-256, Grøstl-512, JH-256, JH-512, KangarooTwelve, SM3</p>
 					</div>
 				</div>
 			</section>
@@ -161,11 +251,15 @@ byte[] hash = HashFacade.HashKeyed(HashAlgorithm.HighwayHash64, data, highwayKey
 					<dt>License</dt>
 					<dd>The Unlicense (Public Domain)</dd>
 					<dt>Version</dt>
-					<dd>1.3.0</dd>
+					<dd>1.8.0</dd>
+					<dt>Algorithms</dt>
+					<dd>70 total (16 native streaming)</dd>
 					<dt>NuGet</dt>
 					<dd><a href="https://www.nuget.org/packages/StreamHash" target="_blank">StreamHash</a></dd>
 					<dt>Tests</dt>
-					<dd>619 tests passing</dd>
+					<dd>762+ tests passing</dd>
+					<dt>Documentation</dt>
+					<dd><a href="https://github.com/TheAnsarya/StreamHash/tree/main/docs" target="_blank">API Docs</a></dd>
 				</dl>
 			</section>
 		</div>

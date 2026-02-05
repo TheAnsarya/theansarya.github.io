@@ -25,11 +25,12 @@
 	--text-primary: var(--cream-light);
 	--text-secondary: var(--cream-medium);
 	--text-muted: var(--cream-dark);
-	--link-color: var(--green-moss);
+	--link-color: var(--orange-sunset); /* Changed from green-moss for better readability */
 	--border-color: var(--brown-light);
 
 	--font-heading: 'Libre Baskerville', Georgia, serif;
 	--font-body: 'Space Mono', monospace;
+	--font-emoji: 'Noto Color Emoji', 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;
 
 	--space-2: 0.5rem;
 	--space-3: 0.75rem;
@@ -45,6 +46,11 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Emoji font for proper display */
+.icon, .project-icon, .feature-icon, .tool-box .icon {
+	font-family: var(--font-emoji);
+}
 
 body {
 	font-family: var(--font-body);
@@ -327,6 +333,36 @@ main p code {
 	color: var(--green-moss);
 }
 
+/* Algorithm List for StreamHash page */
+.algorithm-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: var(--space-4);
+}
+
+.algo-category {
+	background: var(--bg-card);
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-md);
+	padding: var(--space-4);
+}
+
+.algo-category h4 {
+	font-family: var(--font-heading);
+	font-size: 1rem;
+	color: var(--cream-light);
+	margin-bottom: var(--space-2);
+	border-bottom: 1px solid var(--border-color);
+	padding-bottom: var(--space-2);
+}
+
+.algo-category p {
+	font-size: 0.8rem;
+	color: var(--text-muted);
+	margin: 0;
+	line-height: 1.5;
+}
+
 /* Meta List */
 .meta-list {
 	display: grid;
@@ -343,6 +379,15 @@ main p code {
 	color: var(--text-muted);
 }
 
+.meta-list dd a {
+	color: var(--orange-sunset);
+}
+
+.meta-list dd a:hover {
+	color: var(--cream-light);
+	text-decoration: underline;
+}
+
 /* Footer */
 footer {
 	background: var(--bg-secondary);
@@ -353,8 +398,8 @@ footer {
 }
 
 footer p { color: var(--text-muted); font-size: 0.875rem; margin: 0; }
-footer a { color: var(--link-color); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
+footer a { color: var(--orange-sunset); text-decoration: none; }
+footer a:hover { color: var(--cream-light); text-decoration: underline; }
 
 /* Responsive */
 @media (max-width: 768px) {

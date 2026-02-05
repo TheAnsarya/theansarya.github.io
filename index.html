@@ -25,7 +25,7 @@
 	<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/vhs-effect-lite.css">
 
 	<style>
@@ -89,6 +89,7 @@
 			--font-heading: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
 			--font-body: 'Space Mono', 'Courier New', Courier, monospace;
 			--font-mono: 'Space Mono', monospace;
+			--font-emoji: 'Noto Color Emoji', 'Segoe UI Emoji', 'Apple Color Emoji', 'Twemoji Mozilla', sans-serif;
 
 			/* Font Sizes */
 			--text-xs: 0.75rem;
@@ -170,6 +171,11 @@
 		h2 { font-size: var(--text-3xl); }
 		h3 { font-size: var(--text-2xl); }
 		h4 { font-size: var(--text-xl); }
+
+		/* Emoji font for proper display of all emojis including potted plant 🪴 */
+		.icon, .card-icon, .feature-icon, .section-title .icon {
+			font-family: var(--font-emoji);
+		}
 
 		p {
 			margin-bottom: var(--space-4);
@@ -506,16 +512,16 @@
 			letter-spacing: 0.05em;
 		}
 
-		.tag-nes { color: #e60012; border: 1px solid #e60012; }
-		.tag-snes { color: #7b5aa6; border: 1px solid #7b5aa6; }
+		.tag-nes { color: #ff6b6b; border: 1px solid #ff6b6b; } /* Brighter red for readability */
+		.tag-snes { color: #b19cd9; border: 1px solid #b19cd9; } /* Lighter purple for readability */
 		.tag-gb { color: #8b956d; border: 1px solid #8b956d; }
-		.tag-csharp { color: #68217a; border: 1px solid #68217a; }
-		.tag-python { color: #3572a5; border: 1px solid #3572a5; }
-		.tag-typescript { color: #3178c6; border: 1px solid #3178c6; }
+		.tag-csharp { color: #7fdb7f; border: 1px solid #7fdb7f; } /* Green for C# - readable */
+		.tag-python { color: #5a9fd4; border: 1px solid #5a9fd4; } /* Lighter blue */
+		.tag-typescript { color: #5a9fd4; border: 1px solid #5a9fd4; }
 		.tag-assembly { color: var(--orange-sunset); border: 1px solid var(--orange-sunset); }
-		.tag-nuget { color: #004880; border: 1px solid #004880; }
-		.tag-windows { color: #00a4ef; border: 1px solid #00a4ef; }
-		.tag-vscode { color: #007acc; border: 1px solid #007acc; }
+		.tag-nuget { color: #f4a460; border: 1px solid #f4a460; } /* Orange for NuGet - readable */
+		.tag-windows { color: #5ac8fa; border: 1px solid #5ac8fa; } /* Brighter blue */
+		.tag-vscode { color: #5ac8fa; border: 1px solid #5ac8fa; }
 
 		/* ===== FLOWER TOOLCHAIN SECTION ===== */
 		.flower-toolchain {
@@ -981,6 +987,14 @@
 					<p style="max-width: 700px; margin: var(--space-4) auto 0; text-align: center;">
 						Production-ready tools available on official marketplaces and package registries.
 					</p>
+					<div class="nav-buttons" style="margin-top: var(--space-5);">
+						<a href="https://marketplace.visualstudio.com/publishers/TheAnsarya" class="btn btn-secondary" target="_blank" rel="noopener">
+							<span>🧩</span> VS Code Marketplace
+						</a>
+						<a href="https://www.nuget.org/profiles/TheAnsarya" class="btn btn-secondary" target="_blank" rel="noopener">
+							<span>📦</span> NuGet Packages
+						</a>
+					</div>
 				</div>
 
 				<div class="cards-grid">
@@ -1026,6 +1040,14 @@
 						Featured Projects
 					</h2>
 					<div class="section-divider"></div>
+					<div class="nav-buttons" style="margin-top: var(--space-5);">
+						<a href="pages/repositories.html" class="btn btn-secondary">
+							<span>📋</span> All Repositories
+						</a>
+						<a href="https://github.com/TheAnsarya?tab=repositories" class="btn btn-secondary" target="_blank" rel="noopener">
+							<span>💻</span> GitHub Profile
+						</a>
+					</div>
 				</div>
 
 				<div class="cards-grid">
@@ -1222,6 +1244,14 @@
 					<p style="max-width: 700px; margin: var(--space-4) auto 0; text-align: center;">
 						Fully disassembled and documented games. Every game can be reassembled to a byte-identical ROM.
 					</p>
+					<div class="nav-buttons" style="margin-top: var(--space-5);">
+						<a href="pages/projects/game-garden.html" class="btn btn-primary">
+							<span>🌱</span> Game Garden Repo
+						</a>
+						<a href="https://github.com/TheAnsarya/game-garden" class="btn btn-secondary" target="_blank" rel="noopener">
+							<span>💻</span> View on GitHub
+						</a>
+					</div>
 				</div>
 
 				<div class="cards-grid">
@@ -1297,13 +1327,21 @@
 			<section id="potted-plants" class="veg-border-top" style="padding-top: var(--space-8);">
 				<div class="section-header">
 					<h2 class="section-title">
-						<span class="icon">🪴</span>
+						<span class="icon" style="font-family: 'Noto Color Emoji', 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;">🪴</span>
 						Potted Plants
 					</h2>
 					<div class="section-divider"></div>
 					<p style="max-width: 700px; margin: var(--space-4) auto 0; text-align: center;">
 						Comprehensive game hacks and fan remakes grown from the disassembly work.
 					</p>
+					<div class="nav-buttons" style="margin-top: var(--space-5);">
+						<a href="https://github.com/TheAnsarya/dq4r-info" class="btn btn-accent" target="_blank" rel="noopener">
+							<span>🏯</span> DQ4 Remake
+						</a>
+						<a href="https://github.com/TheAnsarya/dq3r-info" class="btn btn-secondary" target="_blank" rel="noopener">
+							<span>🏰</span> DQ3 Research
+						</a>
+					</div>
 				</div>
 
 				<div class="cards-grid">
@@ -1349,6 +1387,11 @@
 						Quick Start Guides
 					</h2>
 					<div class="section-divider"></div>
+					<div class="nav-buttons" style="margin-top: var(--space-5);">
+						<a href="pages/howto.html" class="btn btn-primary">
+							<span>📖</span> View All Guides
+						</a>
+					</div>
 				</div>
 
 				<div class="howto-grid">
@@ -1436,6 +1479,17 @@
 						Documentation & Resources
 					</h2>
 					<div class="section-divider"></div>
+					<div class="nav-buttons" style="margin-top: var(--space-5);">
+						<a href="pages/repositories.html" class="btn btn-secondary">
+							<span>📋</span> All Repositories
+						</a>
+						<a href="pages/plans.html" class="btn btn-secondary">
+							<span>🗺️</span> Roadmap
+						</a>
+						<a href="pages/issues.html" class="btn btn-secondary">
+							<span>🐛</span> Issues
+						</a>
+					</div>
 				</div>
 
 				<div class="cards-grid">
